@@ -1,6 +1,5 @@
 import expect from 'expect'
 import expectJsx from 'expect-jsx'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import React from 'react'
@@ -120,21 +119,6 @@ describe('TextField', () => {
         ref="component"
       />
     )
-  })
-
-  it('provides getRenderedComponent', () => {
-    const dom = TestUtils.renderIntoDocument(
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <ReduxFormMaterialUITextField name="myText" />
-      </MuiThemeProvider>
-    )
-
-    const element = TestUtils.findRenderedComponentWithType(
-      dom,
-      ReduxFormMaterialUITextField
-    )
-    expect(element.getRenderedComponent).toBeA('function')
-    expect(element.getRenderedComponent()).toExist()
   })
 
   it('focuses when field gets active prop', () => {})

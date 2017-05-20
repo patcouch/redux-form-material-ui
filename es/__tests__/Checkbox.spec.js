@@ -16,10 +16,6 @@ var _Checkbox = require('material-ui/Checkbox');
 
 var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
-var _getMuiTheme = require('material-ui/styles/getMuiTheme');
-
-var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
-
 var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
@@ -42,7 +38,7 @@ _expect2.default.extend(_expectJsx2.default);
 
 describe('Checkbox', function () {
   it('has a display name', function () {
-    (0, _expect2.default)(_Checkbox4.default.displayName).toBe('ReduxFormMaterialUICheckbox');
+    (0, _expect2.default)(_Checkbox4.default.displayName).toBe('ReduxFormMaterialUISwitchBase');
   });
 
   it('renders an unchecked Checkbox', function () {
@@ -91,7 +87,7 @@ describe('Checkbox', function () {
   it('provides getRenderedComponent', function () {
     var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
       _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
+      null,
       _react2.default.createElement(_Checkbox4.default, {
         input: { name: 'myCheckbox', onChange: _lodash2.default }
       })

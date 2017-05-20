@@ -8,10 +8,6 @@ var _expectJsx = require('expect-jsx');
 
 var _expectJsx2 = _interopRequireDefault(_expectJsx);
 
-var _getMuiTheme = require('material-ui/styles/getMuiTheme');
-
-var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
-
 var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
@@ -127,18 +123,6 @@ describe('TextField', function () {
       errorText: 'FooWarning',
       ref: 'component'
     }));
-  });
-
-  it('provides getRenderedComponent', function () {
-    var dom = _testUtils2.default.renderIntoDocument(_react2.default.createElement(
-      _MuiThemeProvider2.default,
-      { muiTheme: (0, _getMuiTheme2.default)() },
-      _react2.default.createElement(_TextField4.default, { name: 'myText' })
-    ));
-
-    var element = _testUtils2.default.findRenderedComponentWithType(dom, _TextField4.default);
-    (0, _expect2.default)(element.getRenderedComponent).toBeA('function');
-    (0, _expect2.default)(element.getRenderedComponent()).toExist();
   });
 
   it('focuses when field gets active prop', function () {});
